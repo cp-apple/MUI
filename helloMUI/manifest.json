@@ -261,7 +261,8 @@
 					"examples/tableviews-with-swipe.html",
 					"examples/media-list.html",
 					"examples/nav.html",
-					"examples/numbox.html"
+					"examples/numbox.html",
+					"cp.html"
 				],
 				"priority": 0
 			},
@@ -1008,6 +1009,20 @@
 					"js/mui.js"
 				],
 				"refer": [],
+				"priority": 0
+			},
+			"cp.html": {
+				"resources": [
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"examples/checkbox.html"
+				],
+				"refer": [
+					"examples/accordion.html"
+				],
 				"priority": 0
 			}
 		},

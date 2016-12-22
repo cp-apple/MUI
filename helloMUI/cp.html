@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-bar{
+				background-color: #cc1;
+			}
+			.mui-title{
+				color: #fff;
+			}
+			.mui-bar-tab .mui-tab-item{
+				color: #fff;
+			}
+			.mui-bar-tab .mui-tab-item.mui-active{
+				color: #DDFFDD;
+			}
+			a{
+				color: #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		
+		<!--header-->
+	<nav class="mui-bar mui-bar-tab">
+        <a class="mui-tab-item mui-active">
+            <span class="mui-icon iconfont icon-nanzhuang"></span>
+            <span class="mui-tab-label">男装</span>
+        </a>
+        <a class="mui-tab-item">
+            <span class="mui-icon iconfont icon-nvzhuang"></span>
+            <span class="mui-tab-label">女装</span>
+        </a>
+        <a class="mui-tab-item">
+            <span class="mui-icon iconfont icon-gouwuche"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item">
+            <span class="mui-icon mui-icon-gear"></span>
+            <span class="mui-tab-label">设置</span>
+        </a>
+    </nav>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">cp的nav小标题-.-</h1>
+		</header>
+		<!--<footer class="mui-bar mui-bar-footer">
+			<a class="mui-action-back mui-icon mui-icon-gear mui-pull-right"></a>
+		    <h1 class="mui-title">cp的footer底部-.-</h1>
+		    <a class="mui-action-back mui-icon mui-icon-star mui-pull-left"></a>
+		</footer>-->
+
+		<!--content-->
+		<div class="mui-content">
+			== == == == ==
+			<div class="mui-card">
+				<div class="mui-card-content">
+					<form action="#" method="post">
+						<p>name：<span id="cpName"></span></p>
+						<p>other：<span id="cpOther"></span></p>
+			    		慌慌张张迷迷茫茫的周三，都周三了啊，呀哈哈...好好学习天天向上，学无止境，学海无涯苦作舟！
+						<button class="mui-btn mui-btn-green mui-pull-right" type="button">确定</button><br/><br/>
+						听说真机测试可以实时改变呢？!  亲测是滴。
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
+<script>
+	mui.init({
+		swipeBack:true //启用右滑关闭功能
+	})
+	var name,other;
+	mui.plusReady(function(){
+		var self=plus.webview.currentWebview();
+		name=self.name;
+		other=self.other;
+	});
+		
+	var cpName=document.getElementById('cpName');
+	var cpOther=document.getElementById('cpOther');
+	cpName.innerText='000';
+	cpOther.innerText=other;
+
+var button=document.getElementsByTagName('button')[0];
+var i=1;
+button.addEventListener('tap',function(){
+	console.log('hi,cp'+i+'~');
+	i++;
+});
+</script>
