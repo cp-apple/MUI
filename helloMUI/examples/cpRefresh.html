@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li>
+						酒后经历立即烦到死v大来说。
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				subpages:[{
+					url:pullrefresh-subpage-url,    //下拉刷新内容页面地址
+					id:pullrefresh-subpage-id,    //内容页面标志
+					styles:{
+						top:subpage-top-position   //内容页面顶部位置，需根据实际页面布局计算，若使用标准mui导航，顶部默认为48px;
+					}
+				}],
+				pullRefresh:{
+					container:"#refreshContainer",     //下拉容器标识，querySelector能定位的选择器均可，比如id,.class等
+					down:{
+						height:50,  //可选，默认50，触发下拉刷新拖动距离，
+						auto:true,  //可选，默认false，自动下拉刷新一次
+						contentdown:"下拉可以刷新",  //可选，在下拉可刷新转态时，下拉刷新控件上显示的标题内容
+						contentover:"释放立即刷新",  //可选，在释放可刷新状态时，下拉控件上显示的标题内容
+						contentrefresh:"正在刷新...",  //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+						callback:function pullfresh-function(){
+							console.log('数据数据数据...');
+							
+							//关闭正在刷新的雪花进度提示，内容区域回滚到顶部位置
+							mui('#refreshContainer').PullRefresh().endPulldownToRefresh();
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

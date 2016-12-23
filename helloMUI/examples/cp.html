@@ -5,8 +5,8 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="css/mui.min.css" rel="stylesheet" />
-		<link href="css/iconfont.css" rel="stylesheet" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
 		<style type="text/css">
 			.mui-bar{
 				background-color: #cc1;
@@ -27,7 +27,7 @@
 	</head>
 
 	<body>
-		<script src="js/mui.min.js"></script>
+		<script src="../js/mui.min.js"></script>
 		
 		<!--header-->
 	<nav class="mui-bar mui-bar-tab">
@@ -69,9 +69,21 @@
 			    		慌慌张张迷迷茫茫的周三，都周三了啊，呀哈哈...好好学习天天向上，学无止境，学海无涯苦作舟！
 						<button class="mui-btn mui-btn-green mui-pull-right" type="button">确定</button><br/><br/>
 						听说真机测试可以实时改变呢？!  亲测是滴。
-					</form>
+					</form>	
 				</div>
 			</div>
+			
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="">面板一</a>
+					<div class="mui-collapse-content">
+						<p>面板一的内容</p>
+						<p>面板一的内容</p>
+						<p>面板一的内容</p>
+						<p>面板一的内容</p>
+					</div>
+				</li>
+			</ul>
 		</div>
 
 	</body>
@@ -95,6 +107,7 @@
 var button=document.getElementsByTagName('button')[0];
 var i=1;
 button.addEventListener('tap',function(){
+	console.log(Math.abs(~2016));
 	console.log('hi,cp'+i+'~');
 	i++;
 });
