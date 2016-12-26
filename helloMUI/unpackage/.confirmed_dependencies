@@ -28,7 +28,14 @@
 			"examples/guide.html",
 			"cp.html",
 			"examples/accordion.html",
-			"examples/checkbox.html"
+			"examples/checkbox.html",
+			"examples/cpLogin.html",
+			"examples/badges.html",
+			"examples/cp.html",
+			"examples/cpRefresh.html",
+			"examples/ajax.html",
+			"examples/buttons-with-block.html",
+			"examples/dialog.html"
 		]
 	},
 	"examples/guide.html": {
@@ -86,6 +93,23 @@
 	"examples/checkbox.html": {
 		"resources": [
 			"css/app.css"
+		]
+	},
+	"examples/cpLogin.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"examples/badges.html": {
+		"resources": [
+			"css/app.css"
+		]
+	},
+	"examples/cp.html": {
+		"resources": [
+			"css/iconfont.css",
+			"fonts/iconfont.ttf"
 		]
 	}
 }

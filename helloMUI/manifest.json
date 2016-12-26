@@ -262,7 +262,10 @@
 					"examples/media-list.html",
 					"examples/nav.html",
 					"examples/numbox.html",
-					"cp.html"
+					"cp.html",
+					"examples/cpLogin.html",
+					"examples/cp.html",
+					"examples/cpRefresh.html"
 				],
 				"priority": 0
 			},
@@ -1023,6 +1026,22 @@
 				"refer": [
 					"examples/accordion.html"
 				],
+				"priority": 0
+			},
+			"examples/cpLogin.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/cp.html": {
+				"resources": [
+					"css/iconfont.css",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},
