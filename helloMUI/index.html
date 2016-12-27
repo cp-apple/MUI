@@ -17,6 +17,9 @@
 			<a id="info" class="mui-icon mui-icon-info-filled mui-pull-right" style="color: #999;"></a>
 			<h1 class="mui-title">Hello mui</h1>
 		</header>
+		<!--<footer class="mui-bar mui-bar-nav mui-bar-footer" style="height: 45px;line-height: 15px;">
+			我是底部，显示版权等信息
+		</footer>-->
 		<script src="js/mui.min.js"></script>
 		<script src="js/update.js" type="text/javascript" charset="utf-8"></script>
 		<script>
@@ -24,12 +27,12 @@
 				main = null;
 			var showMenu = false;
 			mui.init({
-				swipeBack: false,
-				statusBarBackground: '#f7f7f7',
-				gestureConfig: {
+				swipeBack: false,   //不启用右滑关闭功能
+				statusBarBackground: '#f7f7f7',   //设置状态栏颜色，仅ios可用
+				gestureConfig: {   //手势配置
 					doubletap: true
 				},
-				subpages: [{
+				subpages: [{     //子页面
 					id: 'list',
 					url: 'list.html',
 					styles: {
@@ -39,8 +42,9 @@
 					}
 				}]
 			});
-					
-			mui.plusReady(function() {
+			
+			console.log(mui('header')[0].innerText);		
+			mui.plusReady(function() {    //使用HTML5+扩展api				
 				//仅支持竖屏显示
 				plus.screen.lockOrientation("portrait-primary");
 				main = plus.webview.currentWebview();

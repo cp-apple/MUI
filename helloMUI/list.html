@@ -622,8 +622,15 @@
 						},
 						waiting: {
 							autoShow: false
+//	cp						autoShow:true,  
+//							title:"正在加载...。。。",
+//							options:{
+//								width:"100px",
+//								height:'60px'
+//							}
 						}
 					});
+
 				} else if (id && ~id.indexOf('.html')) {
 					if (!mui.os.plus || (!~id.indexOf('popovers.html')&&mui.os.ios)) {
 						mui.openWindow({
