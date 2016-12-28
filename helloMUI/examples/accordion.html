@@ -20,6 +20,7 @@
 			<h1 class="mui-title">折叠面板</h1>
 		</header>
 		<div class="mui-content">
+			<button class="mui-btn mui-btn-danger mui-btn-block mui-action-back">关闭</button>
 			<div class="mui-card">
 				<ul class="mui-table-view">
 					<li class="mui-table-view-cell mui-collapse">
@@ -117,8 +118,30 @@
 		<script src="../js/mui.min.js"></script>
 		<script>
 			mui.init({
-				swipeBack:true //启用右滑关闭功能
+				swipeBack:true, //启用右滑关闭功能
+//				beforeback:function(){    //关闭该页面后，刷新列表页面
+//					//获得列表界面的webview
+//					var list=plus.webview.getWebviewById('list');
+//					//触发列表界面的自定义事件（refresh），进而进行数据刷新
+//					mui.fire(list,'refresh');
+//					return true;
+//				}
+				keyEventBind: {
+					backbutton:false   //关闭back按键监听
+				}
 			});
+			
+			//备份mui.back,mui.back已将窗口关闭逻辑封装的比较完善（预加载及父子窗口），因此最好复用mui.back
+			var old_back=mui.back;
+			mui.back=function(){
+				var btn=["确定","取消"];
+				mui.confirm("确认关闭当前窗口？","温馨提示",btn,function(e){
+					if(e.index==0){
+						//执行mui封装好的窗口关闭逻辑；
+						old_back();
+					}
+				})
+			}
 		</script>
 	</body>
 

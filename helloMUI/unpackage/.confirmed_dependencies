@@ -35,7 +35,9 @@
 			"examples/cpRefresh.html",
 			"examples/ajax.html",
 			"examples/buttons-with-block.html",
-			"examples/dialog.html"
+			"examples/dialog.html",
+			"examples/dtpicker.html",
+			"examples/tabbar.html"
 		]
 	},
 	"examples/guide.html": {
@@ -87,7 +89,15 @@
 			"images/muwu.jpg",
 			"images/yuantiao.jpg",
 			"css/app.css",
-			"images/shuijiao.jpg"
+			"images/shuijiao.jpg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"examples/dtpicker.html"
+		],
+		"refer": [
+			"examples/dtpicker.html",
+			"examples/cpRefresh.html"
 		]
 	},
 	"examples/checkbox.html": {
@@ -110,6 +120,20 @@
 		"resources": [
 			"css/iconfont.css",
 			"fonts/iconfont.ttf"
+		]
+	},
+	"examples/dtpicker.html": {
+		"resources": [
+			"js/mui.picker.min.js",
+			"css/mui.picker.min.css"
+		],
+		"refer": [
+			"examples/accordion.html"
+		]
+	},
+	"examples/tabbar.html": {
+		"resources": [
+			"css/app.css"
 		]
 	}
 }

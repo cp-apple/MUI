@@ -298,9 +298,12 @@
 					"js/mui.min.js",
 					"css/app.css",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"examples/dtpicker.html"
 				],
-				"refer": [],
+				"refer": [
+					"examples/cpRefresh.html"
+				],
 				"priority": 0
 			},
 			"examples/tab-webview-subpage-setting.html": {
@@ -464,7 +467,9 @@
 					"css/mui.min.css",
 					"css/mui.picker.min.css"
 				],
-				"refer": [],
+				"refer": [
+					"examples/accordion.html"
+				],
 				"priority": 0
 			},
 			"examples/date.html": {
